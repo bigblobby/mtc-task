@@ -1,0 +1,24 @@
+body {
+    font-family: Helvetica, sans-serif;
+    color: $boulder;
+}
+
+h1,
+h2,
+h3,
+h4
+h5,
+h6 {
+    color: $mineshaft;
+}
+
+.max-width {
+    max-width: 1670px;
+}
+
+$max-width-sizes: 300, 400, 500, 600, 700, 800, 900, 1000, 1100, 1200, 1300;
+@each $size in $max-width-sizes {
+    .max-width-#{$size}{
+        max-width: #{$size}px;
+    }
+}

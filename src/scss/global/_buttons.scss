@@ -1,0 +1,41 @@
+%btn-base {
+    display: inline-block;
+    border-radius: 25px;
+    padding: 1rem 3rem;
+    white-space: nowrap;
+    transition: all 0.2s ease;
+    font-weight: 400;
+    letter-spacing: 3px;
+    font-size: 13px;
+    text-decoration: none;
+    text-transform: uppercase;
+    cursor: pointer;
+
+    &:hover {
+        text-decoration: none;
+    }
+}
+
+.btn {
+    @extend %btn-base;
+}
+
+.btn-primary {
+    background-color: $tacha;
+    color: $white;
+
+    &:hover {
+        color: $white;
+        background-color: darken($tacha, 10);
+    }
+}
+
+.btn-outline {
+    border: 1px solid $white;
+
+    &:hover {
+        border: 1px solid $white;
+        color: $mineshaft;
+        background-color: $white;
+    }
+}

@@ -1,0 +1,111 @@
+.footer {
+    padding: 2rem;
+    background-image: url("../images/footer.jpg");
+    background-size: cover;
+    background-position: center;
+
+    &__top {
+        position: relative;
+        margin-bottom: 3rem;
+
+        &:before,
+        &:after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            height: 1px;
+            width: calc(50% - 60px);;
+            background-color: rgba($white, 0.2);
+        }
+
+        &:before {
+            left: 0;
+        }
+
+        &:after {
+            right: 0;
+        }
+    }
+
+    &__logo {
+        position: relative;
+        display: flex;
+        justify-content: center;
+    }
+
+    &__section-title {
+        font-size: 1.5rem;
+        font-weight: 600;
+        color: $white;
+        margin: 2rem 0;
+    }
+
+    &__list {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    &__link {
+        display: block;
+        font-size: 0.8rem;
+        text-transform: uppercase;
+        letter-spacing: 3px;
+        color: rgba($white, 0.8);
+        padding: 0.3rem 0;
+        transition: color 0.2s ease;
+
+        &:hover {
+            text-decoration: none;
+            color: $tacha;
+        }
+    }
+
+    &__social {
+        display: flex;
+        flex-wrap: wrap;
+        margin-top: -1rem;
+    }
+
+    &__social-icon {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: $white;
+        width: 50px;
+        height: 50px;
+        border-radius: 40px;
+        margin-right: 1rem;
+        margin-top: 1rem;
+        transition: background-color 0.2s ease;
+
+        &:hover {
+            background-color: $black;
+
+             svg {
+                 color: $white;
+             }
+        }
+
+        svg {
+            width: 20px;
+            height: 20px;
+            color: $black;
+            transition: color 0.2s ease;
+        }
+    }
+
+    &__bottom {
+        padding-top: 2rem;
+        border-bottom: 1px solid rgba($white, 0.2);
+    }
+
+    &__copyright {
+        font-size: 0.8rem;
+        text-align: center;
+        color: rgba($white, 0.5);
+        max-width: 400px;
+        margin: 3rem auto;
+    }
+}
